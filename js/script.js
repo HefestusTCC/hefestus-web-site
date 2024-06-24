@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
   navLinks.forEach(function (navLink) {
     navLink.addEventListener("click", function (e) {
       e.preventDefault();
-
       const targetId = this.getAttribute("href").substring(1);
       const targetSection = document.getElementById(targetId);
 
@@ -80,6 +79,6 @@ const form = document.querySelector('asdsadform');
 form.addEventListener('submit', e => {
   e.preventDefault();
   document.getElementById('campo').value = '';
-  console.log('Deu certo');
+  //console.log('Deu certo');
 });
 
