@@ -45,58 +45,57 @@
     <main id="main">
       <img src="./imagens/fundo_Home.jpg" alt="">
     </main>
-    
+
     <div class="container-empresa" id="container-empresa">
-        <p class="desc-empresa">
-          Hefestus é uma empresa de tecnologia inovadora, comprometida em elevar padrões. Com equipe dedicada, buscamos
-          soluções revolucionárias para desafios complexos. Nosso foco na excelência impulsiona a melhoria contínua.
-          Junte-se a nós nessa jornada inspiradora!</p>
+      <p class="desc-empresa">
+        Hefestus é uma empresa de tecnologia inovadora, comprometida em elevar padrões. Com equipe dedicada, buscamos
+        soluções revolucionárias para desafios complexos. Nosso foco na excelência impulsiona a melhoria contínua.
+        Junte-se a nós nessa jornada inspiradora!</p>
     </div>
 
-      <div class="timeline-container">
-        <div class="timeline-block">
-          <div class="iconic"></div>
-          <div class="text">
-            <header class="heading">
-              <h4 class="title">13 de março de 2024</h4>
-            </header>
-            <p>A empresa HEFESTUS foi fundada.</p>
-          </div>
-        </div>
-
-        <div class="timeline-block">
-          <div class="iconic"></div>
-          <div class="text">
-            <header class="heading">
-              <h4 class="title">Março de 2024</h4>
-            </header>
-            <p>
-              Foi decidido a identidade visual da empresa</p>
-          </div>
-        </div>
-
-        <div class="timeline-block">
-          <div class="iconic"></div>
-          <div class="text">
-            <header class="heading">
-              <h4 class="title">EM BREVE</h4>
-            </header>
-            <p> texto texto texto texto
-            </p>
-          </div>
-        </div>
-
-        <div class="timeline-block">
-          <div class="iconic"></div>
-          <div class="text">
-            <header class="heading">
-              <h4 class="title">em breve</h4>
-            </header>
-            <p> texto texto texto
-              texto</p>
-          </div>
+    <div class="timeline-container">
+      <div class="timeline-block">
+        <div class="iconic"></div>
+        <div class="text">
+          <header class="heading">
+            <h4 class="title">13 de março de 2024</h4>
+          </header>
+          <p>A empresa HEFESTUS foi fundada.</p>
         </div>
       </div>
+
+      <div class="timeline-block">
+        <div class="iconic"></div>
+        <div class="text">
+          <header class="heading">
+            <h4 class="title">20 de março de 2024</h4>
+          </header>
+          <p>
+            Foi decidido a identidade visual da empresa</p>
+        </div>
+      </div>
+
+      <div class="timeline-block">
+        <div class="iconic"></div>
+        <div class="text">
+          <header class="heading">
+            <h4 class="title">24 de abril de 2024</h4>
+          </header>
+          <p> Foi decidido a problemática e o projeto de resolução.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-block">
+        <div class="iconic"></div>
+        <div class="text">
+          <header class="heading">
+            <h4 class="title">15 de maio de 2024</h4>
+          </header>
+          <p>Foi apresentado a ideia do projeto Laços e atestado sua viabilidade.</p>
+        </div>
+      </div>
+    </div>
 
 
     <div class="container-projetos" id="container-projetos">
@@ -105,14 +104,16 @@
       </div>
       <div class="content">
         <div class="cardsProjetos">
+          <a href="https://github.com/pecraxy/EspantaChat" target="_blank">
+            <div class="card">
+              EspantaChat <br>-<br> GroupChat TCP com Java
+            </div>
+          </a>
           <div class="card">
-            Espanta Chat - GroupChat TCP com Java
+            Laços <br>-<br> Em Breve...
           </div>
           <div class="card">
-            Projeto 2
-          </div>
-          <div class="card">
-            Projeto 3
+            Em Breve...
           </div>
         </div>
       </div>
@@ -121,9 +122,9 @@
 
     <div class="devs" id="devs">
       <div class="container-devs">
-        <div>
+        <div class="conhecaEquipe">
           <h1>CONHEÇA NOSSA EQUIPE</h1>
-          <hr />
+          <hr style="max-width: 100%;" />
           <h3>Desenvolvedores do projeto</h3>
         </div>
         <div class="swiper">
@@ -286,14 +287,15 @@
             <form class="form" action="https://api.staticforms.xyz/submit" method="post">
               <div class="form-title">FALE CONOSCO</div>
               <label for="nome">NOME</label>
-              <input type="text" name="name" placeholder="digite seu nome" class="input" required="">
+              <input type="text" name="name" placeholder="Fulano" class="input" required="">
               <label for="email">EMAIL</label>
-              <input type="email" name="email" placeholder="digite seu email" class="input" required="">
+              <input type="email" name="email" placeholder="fulano@gmail.com.br" class="input" required="">
+              <label for="email">ASSUNTO</label>
+              <input type="text" name="Asunto" placeholder="Oportunidade de Negócio" class="input" required="">
               <label for="textarea">COMO PODEMOS TE AJUDAR?</label>
               <textarea name="message" id="textarea" class="textarea" rows="10" cols="50" required=""
-                placeholder="escreva aqui"></textarea>
+                placeholder=""></textarea>
               <button id="btnEnviar" class="btnEnviar" type="submit">ENVIAR</button>
-
               <input type="hidden" name="accessKey" value="600bf68b-eab6-4780-b075-88b531f6f999">
               <input type="hidden" name="redirectTo" value="http://hefestus.atwebpages.com/empresa.html#contato">
             </form>

@@ -75,8 +75,8 @@ btnEnviar.addEventListener('click', function () {
   alert("Obrigada pela mensagem, em breve entraremos em contato!");
 });
 
-const form = document.querySelector('asdsadform');
-form.addEventListener('submit', e => {
+const form = document.querySelector('form');
+form.addEventListener('submit', (e) => {
   e.preventDefault();
   document.getElementById('campo').value = '';
   //console.log('Deu certo');
