@@ -11,7 +11,9 @@ body {
   background-color: #13143D;
   font-family: "Montserrat", "Montserrat";
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
 }
 
 .white {
@@ -40,14 +42,15 @@ a:hover {
 }
 
 nav {
-  padding-top: 5px;
+
   display: flex;
   justify-content: center;
   min-height: 12vh;
   background-color: #13143D;
   z-index: 999;
   position: fixed !important;
-  width: 100vw;
+  width: 100%;
+  max-width: 100vw;
   border-radius: 0px 0px 10px 10px;
 }
 
@@ -62,36 +65,32 @@ nav {
 }
 
 main {
-  margin-top: 10vh;
-  height: 100vh;
-  width: 100vw;
+
+}
+
+main img {
+  width: 100%;
+  max-height: 100%;
 }
 
 .container-empresa {
-  height: 92vh;
+  margin: 5em; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  border-radius: 0px 0px 30px;
-  
 }
 
 .desc {
-
-  justify-content: center;
-  display: flex;
-  padding-top: 10%;
-  margin: 0px;
-  align-items: center;
-
-
+  text-align: center;
+  width: 100%;
 }
 
 .desc-empresa {
   text-align: center;
   justify-content: center;
-  display: flex;
-  align-items: center;
   color: #e2dada;
-  width: 70%;
+  width: 100%;
   font-size: 20px;
 }
 
@@ -102,14 +101,13 @@ h4 {
 }
 
 .timeline-container {
-  padding-top: 50px;
-  padding-bottom: 50px;
-  padding-left: 15px;
-  padding-right: 15px;
-  font-size: 14px;
-  height: 100%;
-
-
+  min-height: 90vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
 }
 
 .timeline-container::before,
@@ -119,18 +117,14 @@ h4 {
 }
 
 .timeline-container p {
+
   color: #e2dada;
 }
 
 .timeline-block {
   max-width: 300px;
-  margin-left: auto;
-  margin-right: auto;
-  height: 230px;
   text-align: center;
-
   position: relative;
-  padding-top: 15px;
 
 }
 
@@ -166,8 +160,6 @@ h4 {
   left: -7px;
   right: -7px;
   bottom: -7px;
-
-
 }
 
 .timeline-block .iconic::after {
@@ -193,7 +185,7 @@ h4 {
 }
 
 .timeline-block .heading {
-  padding-bottom: 10px;
+  padding-bottom: -80px;
   position: relative;
 }
 
@@ -227,13 +219,15 @@ h4 {
 }
 
 .container-projetos {
-  padding-top: 10px;
-  height: 92vh;
+  width: 100%;
+  max-width: 100vw;
+  margin-top: 5rem;
+  min-height: 92vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #d9d9d9;
-  border-radius: 190px 50px 0px 50px;
+  border-radius: 30px;
 }
 
 .titulo {
@@ -252,13 +246,16 @@ h4 {
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 20px;
+  margin-top: 1em;
+  margin-bottom: 2em;
 }
 
 .cardsProjetos {
   display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
-  padding: 20px;
   border-radius: 10px;
 }
 
@@ -293,9 +290,6 @@ h4 {
 
 .devs {
   height: 92vh;
-  align-items: center;
-  justify-content: center;
-  display: flex;
   width: 100%;
   background-color: #13143D;
   background-image: url(/imagens/fundo_empre.png);
@@ -307,9 +301,9 @@ h4 {
   align-items: center;
   justify-content: center;
   padding: 0 10vh;
+  width: 100%;
   position: relative;
   height: 65vh;
-
 }
 
 .container-devs>div:first-child {
@@ -548,30 +542,41 @@ hr {
 }
 
 .div-parceiros {
-  border: solid 5px #1cfcb1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: solid 2px #1cfcb1;
   border-radius: 10px;
-  padding-top: 5%;
   align-items: center;
   text-align: center;
   width: 80%;
   background-color: #d9d9d9;
-  height: 70%;
+  min-height: 70%;
 }
 
 .div-parceiros h1 {
   font-size: 2.5rem;
+  margin-top: 2rem;
 }
 
 .div-parceiros p {
   padding-top: 10px;
 }
 
+.div-parceiros img:hover{
+  transition: background-color 0.5s ease;
+  background-color:rgb(44, 44, 44);
+  border-radius: 20px;
+}
+
 .grupos {
   align-items: center;
   justify-content: center;
   display: flex;
-  height: 250px;
-
+  flex-wrap: wrap;
+  min-height: 250px;
+  max-height: 100%;
+  margin: 2em;
 }
 
 .grupos img {
@@ -752,6 +757,39 @@ hr {
 @media (max-width: 575.98px) {
   nav ul li {
     margin: 5px;
+  }
+
+  .timeline-container {
+    flex-direction: column;
+  }
+
+  .container-devs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+  }
+
+  .contato {
+
+    height: 120vh;
+    padding-bottom: 50px;
+  }
+  
+  .container-ctt {
+    padding-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .img-ctt img{
+    width: 100%;
+    height: 100%;
+  }
+  .text p {
 
   }
 
