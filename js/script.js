@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const btnEnviar = document.getElementById('btnEnviar');
 btnEnviar.addEventListener('click', function () {
-  alert("Obrigada pela mensagem, em breve entraremos em contato!");
+  
 });
 
 $('.form').submit(function(event) {
@@ -83,9 +83,11 @@ $('.form').submit(function(event) {
     dataType: 'json', // data type
     data: $(".form").serialize(), // post data || get data
     success: function(result) {
+      
       this.reset()
     },
     error: function(xhr, resp, text) {
+      alert("Obrigada pela mensagem, em breve entraremos em contato!");
       this.reset()
     }
     
@@ -98,6 +100,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
   const checkbox = document.getElementById('chk');
   checkbox.addEventListener('change', () => {
     document.body.classList.toggle('light-mode');
+     const gitImages = document.querySelectorAll(".git");
+
+     // Trocar a imagem de todas as imagens com classe "git" de acordo com o modo
+     gitImages.forEach((img) => {
+       if (document.body.classList.contains("light-mode")) {
+         img.src = "./imagens/git.png"; // Caminho da imagem para o modo claro
+       } else {
+         img.src = "./imagens/github_branco.png"; // Caminho da imagem para o modo escuro
+       }
+     });
+    
     document
       .querySelectorAll(
         ".navbar, .label, .label .ball, li a, .desc-empresa, .container-projetos, .projeto, .card, .devs, .conhecaEquipe, .container-devs .swiper-slide, .container-devs .swiper-slide p, .div-parceiros, .form-title, .form, .btnEnviar, .form label, footer, .footer-col h4, .footer-col, .footer-col .social-links a, .footer-col .social-links a:hover, .copyright, h4, .timeline-container p, .timeline-block .heading, .timeline-block .text, .timeline-block .iconic, .timeline-block:hover .iconic, .container-devs .swiper-pagination-bullet-active, .container-devs .swiper-pagination-bullet, .timeline-block, hr "
